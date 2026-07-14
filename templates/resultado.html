@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Resultado</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+{% if tipo == 1 %}
+
+<h2>Resultado</h2>
+
+<p><strong>Promedio:</strong> {{ promedio }}</p>
+
+<p><strong>Estado:</strong> {{ estado }}</p>
+
+{% else %}
+
+<h2>Resultado</h2>
+
+<p><strong>Nombre:</strong> {{ nombre }}</p>
+
+<p><strong>Cantidad de caracteres:</strong> {{ cantidad }}</p>
+
+{% endif %}
+
+<a href="/">
+<button>Volver al menú</button>
+</a>
+
+</div>
+
+</body>
+
+</html>
